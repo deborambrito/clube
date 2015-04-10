@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Super Consultor</title>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<link rel="stylesheet" href="./res/css/jquery-mobile-flat-ui-theme/jquery.mobile.flatui.min.css" />
+	<link rel="stylesheet" href="./css/index.css" />
+	
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="notification.js"></script>
+	<script type="text/javascript" src="statusbar.js"></script>
+
+	<script type="text/javascript" src="./res/js/jquery/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./res/js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+
+	<script type="text/javascript" src="./js/default.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>	
+	<script type="text/javascript" src="./js/chat.js"></script>
+</head>
+
+<body>
+
+	<!-- Start of first page -->
+	<div data-role="page" id="chat-grupo" data-theme="a" class="page-chat-grupo">
+		<div data-role="panel" id="panel" data-position="left" data-display="push">
+		</div>
+
+		<div data-role="header" data-position="fixed">
+			<a href="chat.html" class="ui-btn ui-icon-carat-l ui-btn-icon-left">Voltar</a>
+			<h1>Novo Grupo</h1>
+		</div>
+
+		<div data-role="content">
+			<div class="clearfix link-header">
+				<p class="pull-left">Selecione os contatos que deseja enviar mensagem.</p>
+			</div>
+
+			<form>
+				<fieldset data-role="controlgroup" data-iconpos="right" data-filter="true" data-filter-placeholder="Digite um nome" data-theme="i" data-corners="false">
+					<input type="checkbox" name="checkbox-h-6a" id="checkbox-h-6a">
+					<label for="checkbox-h-6a" class="lista-contatos label-has-thumb-profile">
+						<div class="img-profile">
+							<img src="./img/thumb-profile.jpg">
+						</div>
+						Nome Sobrenome
+					</label>
+					<input type="checkbox" name="checkbox-h-6b" id="checkbox-h-6b">
+					<label for="checkbox-h-6b" class="lista-contatos label-has-thumb-profile">
+						<div class="img-profile">
+							<img src="./img/thumb-profile.jpg">
+						</div>
+						Nome Sobrenome
+					</label>
+					<input type="checkbox" name="checkbox-h-6c" id="checkbox-h-6c">
+					<label for="checkbox-h-6c" class="lista-contatos label-has-thumb-profile">
+						<div class="img-profile">
+							<img src="./img/thumb-profile.jpg">
+						</div>
+						Nome Sobrenome
+					</label>
+				</fieldset>
+			</form>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="custom-footer">
+			<div class="group-footer"> <!-- <div class="group-footer chat-active"> -->
+				<a href="#menuUpload" class="footer-upload" data-rel="popup" data-transition="slideup">
+					<i class="ionicons ion-ios-upload-outline"></i>
+				</a>
+				<form class="text-box">
+					<textarea name="textarea" class="chat-textarea" data-mini="true" rows="1" id="inbox-continue-conversation"></textarea>
+					<input type="submit" value="Enviar" class="bt-sendmessage">
+				</form>
+				<div class="audio-record">
+
+				</div>
+				<a href="#" class="footer-microphone">
+					<i class="ionicons ion-mic-a"></i>
+				</a>
+			</div>
+		</div>
+
+		<div data-role="popup" id="menuUpload" data-overlay-theme="i" data-theme="a" data-transition="none" data-position-to=".custom-footer" data-corner="false">
+			<ul data-role="listview" data-inset="true">
+				<li data-icon="false"><a href="#">Enviar foto</a></li>
+				<li data-icon="false"><a href="#">Enviar video</a></li>
+				<li data-icon="false"><a href="#" data-rel="back">Cancelar</a></li>
+			</ul>
+		</div>
+	</div><!-- /page -->
+</body>
+</html>

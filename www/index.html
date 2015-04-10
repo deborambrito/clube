@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Super Consultor</title>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<link rel="stylesheet" href="./res/css/jquery-mobile-flat-ui-theme/jquery.mobile.flatui.min.css" />
+	<link rel="stylesheet" href="./css/index.css" />
+
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="notification.js"></script>
+	<script type="text/javascript" src="statusbar.js"></script>
+
+	<script type="text/javascript" src="./res/js/jquery/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./res/js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+
+<script type="text/javascript" charset="utf-8" src="js/index.js"></script> 
+<script type="text/javascript" charset="utf-8" src="js/js.js"></script>   
+        <script type="text/javascript" src="PushNotification.js"></script> 
+	
+	<script type="text/javascript" src="./js/default.js"></script>
+	<script type="text/javascript" src="./js/contatos.js"></script>
+	<script type="text/javascript" src="./js/cadastro.js"></script>
+	
+</head>
+
+<body>
+	<div class="loader" style="display:none">
+		<img src="img/rings.svg" alt="Carregando...">
+	</div>
+
+	<!-- Start of first page -->
+	<div data-role="page" id="login-page" class="login-theme" data-theme="z">
+		<div role="main" class="ui-content">			
+			<div class="container-login">
+				<h1 class="logo">
+					<img src="img/logo-superconsultor-branco.png" alt="Super Consultor">
+				</h1>
+				<form id="frm-login" data-ajax="false">
+					<input type="hidden" value="password" name="grant_type" />
+					<div class="form-group">
+						<label class="ui-hidden-accessible">E-mail</label>
+						<input type="email" id="login" placeholder="Digite seu e-mail" name="userName" value="marciolopesmacedo@gmail.com">
+					</div>
+					<div class="form-group">
+						<label class="ui-hidden-accessible">Senha</label>
+						<input type="password" id="senha" placeholder="Digite sua senha" name="password" value="123456">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn">Entrar</button>
+					</div>
+				</form>
+				<p class="esqueci-senha">
+					<a href="#esqueci-senha-page">Esqueci minha senha</a>
+				</p>
+			</div>
+		</div><!-- /content -->
+		
+	</div><!-- /page -->
+
+	<div data-role="page" id="esqueci-senha-page" class="login-theme" data-theme="z">
+		<div role="main" class="ui-content">			
+			<div class="container-login">
+				<h1 class="logo">
+					<img src="img/logo-superconsultor-branco.png" alt="Super Consultor">
+				</h1>
+				<form>
+					<div class="form-group">
+						<label>Digite seu e-mail abaixo para recuperar sua senha:</label>
+						<input type="email" placeholder="Digite seu e-mail">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn">Recuperar</button>
+					</div>
+				</form>
+				<p class="esqueci-senha">
+					<a href="#login-page">Voltar</a>
+				</p>
+			</div>
+		</div><!-- /content -->		
+	</div><!-- /page -->
+</body>
+</html>

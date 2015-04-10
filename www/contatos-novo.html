@@ -1,0 +1,183 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Super Consultor</title>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<link rel="stylesheet" href="./res/css/jquery-mobile-flat-ui-theme/jquery.mobile.flatui.min.css" />
+	<link rel="stylesheet" href="./css/index.css" />
+	
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="notification.js"></script>
+	<script type="text/javascript" src="statusbar.js"></script>
+
+	<script type="text/javascript" src="./res/js/jquery/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./res/js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+
+	<script type="text/javascript" src="./js/default.js"></script>
+	<script type="text/javascript" src="./js/contatos.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+	
+</head>
+
+<body>
+
+	<!-- Start of first page -->
+	<form data-role="page" id="contatos-novo" data-theme="a">
+		<div data-role="panel" id="panel" data-position="left" data-display="push">
+		</div>
+
+		<div data-role="header" data-position="fixed">
+			<a href="contatos.html" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-carat-l ui-btn-icon-left btncontatos" >Contatos</a>
+			<h1>Novo Contato</h1>
+			<a href="#" onclick="GravarContato();"class="ui-btn">Gravar</a>
+		</div>
+
+		<div data-role="content">
+				<ul data-role="listview" class="listedit list-form" data-theme="i"> 
+					<li>
+						<div class="text-field ui-field-contain">
+							<label for="nome" class="ui-hidden-accessible">Nome</label>
+							<input type="text" name="nome" value="" maxlength="255" placeholder="Nome" required id="nomecont" />
+						</div>
+					</li>
+					<li>
+						<div class="text-field ui-field-contain">
+							<label for="email" class="ui-hidden-accessible">E-mail</label>
+							<input type="email" name="email" value="" maxlength="255" placeholder="E-mail" id="emailcont" />
+						</div>
+					</li>
+					<li>
+						<div class="text-field ui-field-contain">
+							<label for="cpf" class="ui-hidden-accessible">CPF</label>
+							<input type="text" name="cpf" value="" maxlength="11" placeholder="CPF" id="cpfcont" />
+						</div>
+					</li>
+					<li>
+						<div class="text-field ui-field-contain text-label">
+							<label for="anicont">Aniversário</label>
+							<input type="date" name="aniversario" value="" id="anicont">
+						</div>
+					</li>
+					
+					<li>
+						<div class="text-field ui-field-contain text-label">
+							<label for="select-operadora-1">Operadora do Telefone 1</label>
+							<select id="select-operadora-1" name="select-operadora-1">
+								<option>Operadora1</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<div class="text-field ui-field-contain">
+							<label for="telefone1" class="ui-hidden-accessible">Telefone 1</label>
+							<input type="tel" name="telefone1" maxlength="20" value="" placeholder="Telefone 1" id="telefone1cont"  />
+						</div>
+					</li>
+					<li>
+						<div class="text-field ui-field-contain text-label">
+							<label for="select-operadora-2">Operadora do Telefone 2</label>
+							<select id="select-operadora-2" name="select-operadora-2">
+								<option>Operadora2</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<div class="text-field ui-field-contain">
+							<label for="telefone2" class="ui-hidden-accessible">Telefone 2</label>
+							<input type="tel" name="telefone2" maxlength="20" value="" placeholder="Telefone 2" id="telefone2cont"  />
+						</div>
+					</li>
+					<li>
+						<div class="text-field ui-field-contain">
+							<label for="endereco" class="ui-hidden-accessible">Endereço</label>
+							<input type="text" name="endereco" maxlength="500" value="" placeholder="Endereço" id="enderecocont" />
+						</div>
+					</li>
+					<li>
+						<div class="text-field ui-field-contain">
+							<label for="numero" class="ui-hidden-accessible">Número</label>
+							<input type="tel" name="numero" maxlength="10" value="" placeholder="Numero" id="numerocont" />
+						</div>
+					</li>
+					<li>
+						<div class="text-field ui-field-contain">
+							<label for="Complemento" class="ui-hidden-accessible">Complemento</label>
+							<input type="text" name="complemento" maxlength="50" value="" placeholder="Complemento" id="complementocont" />
+						</div>
+					</li>
+					<li>
+						<div class="text-field ui-field-contain">
+							<label for="cep" class="ui-hidden-accessible">CEP</label>
+							<input type="tel" name="cep" value="" maxlength="8" placeholder="CEP" id="cepcont" />
+						</div>
+					</li>
+					<li>
+						<div class="text-field ui-field-contain">
+							<label for="bairro" class="ui-hidden-accessible">Bairro</label>
+							<input type="text" name="bairro" maxlength="300" value="" placeholder="Bairro" id="bairrocont" />
+						</div>
+					</li>
+					<li>
+						<div class="text-field ui-field-contain">
+							<label for="cidade" class="ui-hidden-accessible">Cidade</label>
+							<input type="text" name="cidade" maxlength="100" value="" placeholder="Cidade" id="cidadecont" />
+						</div>
+					</li>
+					<li>
+						<div class="text-field ui-field-contain">
+							<label for="estado" class="ui-hidden-accessible">Estado</label>
+							<input type="text" name="estado" value="" maxlength="2"placeholder="Estado" id="estadocont" />
+						</div>
+					</li>
+					<li>
+						 <fieldset data-role="controlgroup">
+							<input type="checkbox" id="comproucont" class="custom">
+							<label for="comproucont">Comprou</label>
+							
+							<input type="checkbox" class="custom" id="envioemailcont">
+							<label for="envioemailcont">Envio de email</label>
+							
+							<input type="checkbox" class="custom" id="intprodutocont">
+							<label for="intprodutocont">Interessado no Produto</label>
+							
+							<input type="checkbox" class="custom" id="intredecont">
+							<label for="intredecont">Interessado na Rede</label>
+
+							<input type="checkbox" class="custom" id="redecont">
+							<label for="redecont">Rede</label>
+						</fieldset>
+
+
+					</li>
+					 
+					<li>
+						<div class="text-field ui-field-contain">
+							<label for="observacaocont" class="ui-hidden-accessible">Observação</label>
+							<!--<input type="text" name="observacao"  maxlength="500" value="" placeholder="Observação" id="observacaocont" />-->
+							<textarea name="observacao" id="observacaocont" placeholder="Observação" rows="5"></textarea>
+						</div>
+					</li>
+					
+					
+				</ul>
+			
+
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false">
+			<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+				<ul> 
+					<li><a href="home.html" id="home" data-icon="home">Home</a></li> 
+					<li><a href="cadastros.html" id="cadastros" data-icon="info">Cadastros</a></li> 
+					<li><a href="chat.html" id="chat"  onclick="Chat();" data-icon="comment">Chat</a></li> 
+					<li><a href="contatos.html" id="contatos" data-transition="slide" onclick="ListaContatos();" data-icon="user">Contatos</a></li> 
+				</ul> 
+			</div> 
+		</div>
+
+	</form><!-- /page -->
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Super Consultor</title>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<link rel="stylesheet" href="./res/css/jquery-mobile-flat-ui-theme/jquery.mobile.flatui.min.css" />
+	<link rel="stylesheet" href="./css/index.css" />
+	
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="notification.js"></script>
+	<script type="text/javascript" src="statusbar.js"></script>
+
+	<script type="text/javascript" src="./res/js/jquery/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./res/js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="./res/js/mediaelement/mediaelement-and-player.min.js"></script>
+
+
+        <script type="text/javascript" src="PushNotification.js"></script> 
+
+	<script type="text/javascript" src="js/js.js"></script>
+	<script type="text/javascript" src="./js/default.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+	<script type="text/javascript" src="./js/contatos.js"></script>	
+	<script type="text/javascript" src="./js/chat.js"></script>
+
+</head>
+ 
+<body>
+	
+	<!-- Start of first page -->
+	<div data-role="page" id="chat-mensagens" data-theme="a">
+		<div data-role="panel" id="panel" data-position="left" data-display="push">
+		</div>
+		<div data-role="header" id="headermensagem" data-position="fixed" data-tap-toggle="false">
+		<a  href="chat.html" onclick="Chat();" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-carat-l ui-btn-icon-left">Voltar</a>
+		<h1 class="titulomsg"><span style="visibility: hidden">NOME</span></h1>
+		</div>
+
+		<div data-role="content">
+			<div class="mensagens">
+				<div id="listamensagem" class="mensagens-group">
+					<div id="div">
+						<img src="loading.gif">
+					</div>
+				</div>				
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-tap-toggle="false" class="custom-footer">
+			<div class="group-footer" id="divmedia"> <!-- <div class="group-footer chat-active"> -->
+				<a href="#menuUpload" class="footer-upload" data-rel="popup" data-transition="slideup">
+					<i class="ionicons ion-ios-upload-outline"></i>
+				</a>
+				<form class="text-box">
+					<textarea name="textarea" class="chat-textarea textmessage" data-mini="true" rows="1" id="inbox-continue-conversation" onfocus="TextArea()"></textarea>
+					<input type="button" value="Enviar" class="bt-sendmessage" onclick="Enviar();">
+				</form>
+				<a href="#" class="footer-camera" onclick="Picture();">
+					<i class="ionicons ion-camera"></i>
+				</a>
+				<!--<a href="#popupRecording" class="footer-microphone" data-rel="popup">
+					<i class="ionicons ion-mic-a"></i>
+				</a>-->
+			</div>
+		</div>
+
+		<div data-role="popup" id="menuUpload" data-overlay-theme="i" data-theme="a" data-transition="none" data-position-to=".custom-footer" data-corner="false">
+			<ul data-role="listview" data-inset="true">
+				<li data-icon="false"><a href="#" onclick="getPhoto();">Enviar foto</a></li>
+				<li data-icon="false"><a href="#" data-rel="back">Cancelar</a></li>
+			</ul>
+		</div>
+
+		<!--<div data-role="popup" id="popupRecording" data-overlay-theme="i" data-theme="a" data-transition="fade" data-position-to="window" data-corner="false">
+			<div class="record-audio stopped" style="display:none">
+				<h2>Gravar audio</h2>
+				<div class="record-controls">
+					<a href="#" class="record-button"><i class="ionicons ion-mic-a"></i></a>
+				</div>
+
+				<div class="record-alerts">
+					<p>Para gravar, pressione o botão</p>
+				</div>
+			</div>
+
+			<div class="record-audio recording">
+				<h2>00:03</h2>
+				<div class="record-controls">
+					<a href="#" class="send-button"><i class="ionicons ion-android-send"></i></a>
+					<a href="#" class="delete-button"><i class="ionicons ion-ios-trash"></i></a>
+				</div>
+
+				<div class="record-alerts">
+					<p>Para enviar, pressione o botão <span><i class="ionicons ion-android-send"></i></span></p>
+					<p>Para cancelar, pressione o botão <span><i class="ionicons ion-ios-trash"></i></span></p>
+				</div>
+			</div>
+		</div>-->
+
+		<div data-role="popup" id="popupImagemConversa" data-overlay-theme="i" data-theme="a" data-corners="false" data-transition="pop">
+			<a href="#" data-rel="back" class="bt-fechar"><i class="ionicons ion-close-circled"></i></a>
+			<div class="popup-imagem ">
+				<img class="popphoto" src="">
+				<p id="poppopup"></p>
+			</div>
+		</div>
+
+
+	</div><!-- /page -->
+	
+</body>
+</html>

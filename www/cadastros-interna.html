@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Super Consultor</title>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<link rel="stylesheet" href="./res/css/jquery-mobile-flat-ui-theme/jquery.mobile.flatui.min.css" />
+	<link rel="stylesheet" href="./css/index.css" />
+	
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="notification.js"></script>
+	<script type="text/javascript" src="statusbar.js"></script>
+
+	<script type="text/javascript" src="./res/js/jquery/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./res/js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+
+	<script type="text/javascript" src="./js/default.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>	
+	<script type="text/javascript" src="./js/cadastro.js"></script>
+</head>
+
+<body>
+
+	<!-- Start of first page -->
+	<div data-role="page" id="cadastros-interna-page" data-theme="a">
+		<div data-role="panel" id="panel" data-position="left" data-display="push">
+		</div>
+
+		<div data-role="header" data-position="fixed">
+			<a href="cadastros.html" class="ui-btn ui-icon-carat-l ui-btn-icon-left" data-transition="slide" data-direction="reverse">Voltar</a>
+			<h1 class="nome-pagina"></h1>
+		</div>
+
+		<div data-role="content">
+			<div class="clearfix link-header">
+				<p class="pull-left"><p>Selecione um cadastro abaixo para ver seus detalhes:</p>
+			</div>
+
+
+			
+			<ul data-role="listview" data-theme="i" id="lista-cadastros">				
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" >
+			<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+				<ul> 
+					<li><a href="home.html" data-transition="slide" id="home" data-icon="home">Home</a></li> 
+					<li><a href="cadastros.html" data-transition="slide" id="cadastros" class="ui-btn-active ui-state-persist" data-icon="info">Cadastros</a></li> 
+					<li><a href="chat.html" data-transition="slide" id="chat"  onclick="Chat();" data-icon="comment">Chat</a></li> 
+					<li><a href="contatos.html" data-transition="slide" onclick="CarregaContatos();"  id="contatos" data-icon="user">Contatos</a></li>
+				</ul> 
+			</div> 
+		</div>
+
+	</div><!-- /page -->
+</body>
+</html>

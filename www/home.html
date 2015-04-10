@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Super Consultor</title>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+	<link rel="stylesheet" href="./res/css/jquery-mobile-flat-ui-theme/jquery.mobile.flatui.min.css" />
+	<link rel="stylesheet" href="./css/index.css" />
+	
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="notification.js"></script>
+	<script type="text/javascript" src="statusbar.js"></script>
+
+	<script type="text/javascript" src="./res/js/jquery/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./res/js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>
+
+	<script type="text/javascript" src="js/js.js"></script>
+	<script type="text/javascript" src="./js/default.js"></script>
+	<script type="text/javascript" src="./js/index.js"></script>
+	<script type="text/javascript" src="./js/contatos.js"></script>	
+	<script type="text/javascript" src="./js/cadastro.js"></script>
+	
+</head>
+
+<body>
+
+	<!-- Start of first page -->
+	<div data-role="page" id="home-page" data-theme="a">
+		<div data-role="panel" id="panel" data-position="left" data-display="push">
+		</div>
+
+		<div data-role="header" data-position="fixed">
+			<h1>Super Consultor</h1>
+			<a href="#" class="ui-btn ui-btn-right btn-logout"><i class="ionicons ion-android-exit"></i></a>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview" data-theme="i">
+				<li>
+					<a href="cadastros.html" data-transition="slide">
+						<h2>Cadastros</h2>
+						<p>Confira os cadastros das suas páginas de captura.</p>
+					</a>
+				</li>
+				<li>
+					<a href="chat.html" data-transition="slide" onclick="Chat();">
+						<h2>Chat</h2>
+						<p>Fale com a sua equipe.</p>
+					</a>
+				</li>
+				<li>
+					<a href="contatos.html"  onclick="CarregaContatos();" data-transition="slide" id="contatos">
+						<h2>Contatos</h2>
+						<p>Cadastre seus contatos mais importantes.</p>
+					</a>
+				</li>
+				<li>
+					<a href="#"  data-transition="slide" id="contatos">
+						<h2>Eventos</h2>
+						<p></p>
+					</a>
+				</li>
+				<li>
+					<a href="#"  data-transition="slide" id="contatos">
+						<h2>Vendas</h2>
+						<p></p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" >
+			<div data-role="navbar" class="nav-glyphish-example" data-grid="c"> 
+				<ul> 
+					<li><a href="home.html" id="home" data-icon="home" class="ui-btn-active ui-state-persist">Home</a></li> 
+					<li><a href="cadastros.html" id="cadastros" data-icon="info" data-transition="slide">Cadastros</a></li> 
+					<li><a href="chat.html" id="chat" onclick="Chat();" data-icon="comment">Chat</a></li> 
+					<li><a href="contatos.html" data-transition="slide" onclick="CarregaContatos();" id="contatos" data-icon="user">Contatos</a></li>
+				</ul> 
+			</div> 
+		</div>
+
+	</div><!-- /page -->
+</body>
+</html>
